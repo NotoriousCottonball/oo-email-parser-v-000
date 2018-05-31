@@ -6,7 +6,8 @@ class EmailParser
   end
   
   def parse 
-    self.email_string.splice(/[])
+    self.email_string.splice(/[, ]/).reject(&:empty?)
+  end
     
     
     
