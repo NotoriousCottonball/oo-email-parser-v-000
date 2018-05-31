@@ -6,7 +6,7 @@ class EmailParser
   end
   
   def parse 
-    self.email_string.split(/[, ]/).reject(&:empty?)
+    self.email_string.split(/[, ]/).reject(&:empty?).uniq
   end
     
     
